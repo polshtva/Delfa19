@@ -1,0 +1,115 @@
+.cyberattack-statistics {
+    margin-top: 90px;
+  
+}
+
+.container {}
+
+.cyberattack-statistics__content{
+    background-color: var(--colorBlock);
+    padding: 102px 103px 95px 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.15);
+}
+
+.cyberattack-statistics__main-title {
+    color: #fff;
+
+}
+
+
+
+.cyberattack-statistics__main-title:last-child{
+    margin-top: 59px;
+}
+.cyberattack-statistics__list-card {
+    margin-top: 31px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 34px 40px; 
+}
+
+.cyberattack-statistics__card {
+        width: 450px;
+        backdrop-filter: blur(13.918118476867676px);
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 14px;
+        padding: 23px 59px 30px 25px;
+        position: relative;
+        overflow: hidden;
+}
+
+.cyberattack-statistics__img-dec {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+}
+.cyberattack-statistics__title {
+    font-family: var(--font-montserrat-medium);
+        font-weight: 500;
+        font-size: clamp(1rem, 0.861rem + 0.741vi, 1.75rem);
+        line-height: 122%;
+        color: #fff;
+}
+
+
+.cyberattack-statistics__info-block{
+    margin-top: 59px;
+}
+.cyberattack-statistics__value {
+    margin-top: 14px;
+    font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.326rem + 0.926vi, 2.438rem);
+    line-height: 122%;
+    color: #fff;}
+
+.cyberattack-statistics__list-item {
+    margin-top: 40px;
+ 
+}
+
+.cyberattack-statistics__item {
+    font-family: var(--font-montserrat-semibold);
+        font-weight: 600;
+        font-size: clamp(1rem, 0.954rem + 0.247vi, 1.25rem);
+        line-height: 140%;
+        color: #fff;
+}
+
+.cyberattack-statistics__item span{
+    font-weight: 500;
+}
+
+@media (max-width: 1265px) {
+    .cyberattack-statistics__card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .cyberattack-statistics__content {
+        padding: 46px 34px 40px 34px;
+    }
+    .cyberattack-statistics__info-block {
+        margin-top: 27px;
+    }
+        .cyberattack-statistics__list-item {
+            margin-top: 22px;
+    
+        }
+}
+
+@media (max-width: 500px) {
+    .cyberattack-statistics__content {
+        padding: 30px 18px 34px 26px;
+    }
+    .cyberattack-statistics__info-block {
+        margin-top: 21px;
+    }
+    .cyberattack-statistics__list-item {
+        margin-top: 18px;
+    }
+}

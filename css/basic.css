@@ -1,0 +1,59 @@
+:root{
+    --colorBlock: #00002C;
+    --font-montserrat-semibold: "Montserrat-SemiBold", sans-serif;
+        --font-montserrat-regular: "Montserrat-Regular", sans-serif;
+        --font-montserrat-medium: "Montserrat-Medium", sans-serif;
+        --font-roboto-bold: "Roboto-Bold", sans-serif;
+        --font-roboto-medium: "Roboto-Medium", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ib-main-title{
+    font-family: var(--font-montserrat-semibold);
+        font-weight: 600;
+        font-size: clamp(1.25rem, 1.019rem + 1.235vi, 2.5rem);
+        line-height: 100%;
+            display: flex;
+                align-items: center;
+                column-gap: 15px;
+}
+
+.ib-main-title::before {
+    content: "";
+    display: inline-block;
+    border-radius: 2px;
+    width: 10px;
+    height: 40px;
+    background: #2924c8;
+}

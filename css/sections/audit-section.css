@@ -1,0 +1,124 @@
+.audit-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0B0C1E;
+    color: #FFFFFF;
+    padding: 50px 10%;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.audit-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #F5F5F5 url("../../img/audit-section/Mask\ group.png") no-repeat center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.audit-content,
+.audit-image {
+    position: relative;
+    z-index: 1;
+
+}
+
+.audit-section {}
+
+.container {}
+
+.audit-section__content {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audit-section__info {
+    max-width: 488px;   
+}
+
+.audit-section__title {
+font-family: var(--font-montserrat-semibold);
+    font-weight: 600;
+    font-size: clamp(2rem, 1.769rem + 1.235vi, 3.25rem);
+    line-height: 100%;
+    color: #fff;
+    text-align: start;
+}
+
+
+.audit-section__title::after{
+    content: "";
+    display: block;
+    margin-top: 15px;
+    width: 266px;
+    height: 2px;
+    background-color: #1D16E3;
+}
+.audit-section__text {
+    font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(0.875rem, 0.829rem + 0.247vi, 1.125rem);
+        line-height: 130%;
+        color: #fff;
+        margin-top: 33px;
+        text-align: start;
+}
+
+.audit-section__img {
+    z-index: 100;
+    transform: translateX(5%);
+}
+
+@media screen and (max-width: 1200px) {
+    .audit-section {
+        flex-direction: column;
+        padding: 30px 5%;
+        text-align: center;
+        min-height: auto;
+        border-radius: 20px;
+        margin: 13px 20px 0;
+        box-shadow: 0px 0px 10px 0 rgb(0, 0, 0, 0.15);
+    }
+
+    .audit-section::after {
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+    }
+
+
+    .audit-section__content {
+        flex-direction: column;
+    }
+
+    .audit-section__info {
+        max-width: 100%;
+    }
+    .audit-section__img {
+        transform: none;
+        margin-top: 20px;
+    }
+    .audit-section__text{
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .audit-section {
+        padding: 10px;
+        margin: 0 8px;
+    }
+
+ .audit-section__text {
+     margin-top: 21px;
+     margin-bottom: 53px;
+ }
+}
