@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     swiperServices = new Swiper(".services .swiper", {
       slidesPerView: screenWidth <= 500 ? 1 : "auto", // 1 слайд если <=500px, иначе auto
-      spaceBetween: 0, // Убираем отступы
+      spaceBetween: 22, // Убираем отступы
       loop: true, // Бесконечный слайдер
       pagination: {
         el: ".services .swiper-pagination",
@@ -50,25 +50,25 @@ $(document).ready(function () {
   $(window).on("resize", function () {
     initSwiper();
   });
-// Получаем все точки пагинации
-const $dots = $(".dots .dot");
+  // Получаем все точки пагинации
+  const $dots = $(".dots .dot");
 
-// Функция для обновления активной точки
-function updateActiveDot(index) {
-  $dots.removeClass("active").eq(index).addClass("active");
-}
+  // Функция для обновления активной точки
+  function updateActiveDot(index) {
+    $dots.removeClass("active").eq(index).addClass("active");
+  }
 
-// Обработчик для кнопки "вперед"
-$(".services .slider__next").on("click", function () {
-  const activeIndex = $dots.index($(".dots .dot.active"));
-  const nextIndex = (activeIndex + 1) % $dots.length; // Циклический переход
-  updateActiveDot(nextIndex);
-});
+  // Обработчик для кнопки "вперед"
+  $(".services .slider__next").on("click", function () {
+    const activeIndex = $dots.index($(".dots .dot.active"));
+    const nextIndex = (activeIndex + 1) % $dots.length; // Циклический переход
+    updateActiveDot(nextIndex);
+  });
 
-// Обработчик для кнопки "назад"
-$(".services .slider__prev").on("click", function () {
-  const activeIndex = $dots.index($(".dots .dot.active"));
-  const prevIndex = (activeIndex - 1 + $dots.length) % $dots.length; // Циклический переход
-  updateActiveDot(prevIndex);
-});
+  // Обработчик для кнопки "назад"
+  $(".services .slider__prev").on("click", function () {
+    const activeIndex = $dots.index($(".dots .dot.active"));
+    const prevIndex = (activeIndex - 1 + $dots.length) % $dots.length; // Циклический переход
+    updateActiveDot(prevIndex);
+  });
 });
