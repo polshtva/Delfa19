@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/media.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/secutity-audit.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -26,10 +28,12 @@
                         </div>
                     </div>
                     <div class="audit-section__img">
+
                         <img src="img/audit-section/audit-img.svg" alt="Аудит ИБ" />
                     </div>
                 </div>
             </div>
+            <div class="audit-section__img-block"></div>
         </section>
 
 
@@ -40,24 +44,32 @@
                         год</div>
                     <ul class="cyberattack-statistics__list-card">
                         <li class="cyberattack-statistics__card">
-                            <div class="cyberattack-statistics__title">Общее количество атак</div>
-                            <div class="cyberattack-statistics__value">1 811 562 707</div>
-                            <img class="cyberattack-statistics__img-dec" style="opacity: 0.1;"
-                                src="img/cyberattack-statistics/pl1.svg" alt="">
+                            <div class="card-border">
+                                <div class="cyberattack-statistics__title">Общее количество атак</div>
+                                <div class="cyberattack-statistics__value">1 811 562 707</div>
+                                <img class="cyberattack-statistics__img-dec" style="opacity: 0.1;"
+                                    src="img/cyberattack-statistics/pl1.svg" alt="">
+                            </div>
                         </li>
                         <li class="cyberattack-statistics__card">
+                            <div class="card-border">
                             <div class="cyberattack-statistics__title">Частота атак</div>
                             <div class="cyberattack-statistics__value">60 атак в секунду</div>
+                            </div>
                         </li>
                         <li class="cyberattack-statistics__card">
+                            <div class="card-border">
                             <div class="cyberattack-statistics__title">Атака мобильных устройств</div>
                             <div class="cyberattack-statistics__value">+12%</div>
                             <img class="cyberattack-statistics__img-dec" style="opacity: 0.5;"
                                 src="img/cyberattack-statistics/pl2.svg" alt="">
+                            </div>
                         </li>
                         <li class="cyberattack-statistics__card">
+                            <div class="card-border">
                             <div class="cyberattack-statistics__title">Основные векторы атак</div>
                             <div class="cyberattack-statistics__value">DDoS, трояны </div>
+                            </div>
                         </li>
                     </ul>
                     <div class="cyberattack-statistics__info-block">
@@ -129,13 +141,80 @@
                                 <li>перечень рекомендаций по приведению информационной систем, ресурсов и активов
                                     компании в соответствии с требованиями ИБ
                                     в различных областях.</li>
-                                <li>пплан мероприятий и проектов, разработанных с учетом вашей специфики, включая
+                                <li>план мероприятий и проектов, разработанных с учетом вашей специфики, включая
                                     взаимозависимости, основные этапы и
                                     приблизительные сроки (дополнительная работа)</li>
                             </ul>
-                        </div>
+                          </div>
                     </div>
                 </div>
+            </div>
+        </section>
+<section class="services">
+    <div class="container">
+        <div class="services__title ib-main-title">Услуги</div>
+        <div class="services__contant">
+            <!-- Контейнер для Swiper -->
+            <div class="swiper">
+                <ul class="swiper-wrapper services__list-card">
+                    <!-- Слайды -->
+                    <li class="swiper-slide services__card">
+                        <img src="img/service/Настройка и управление сетевой безопасностью.png" alt=""
+                            class="services__img">
+                        <div class="services__info-text">Настройка и управление сетевой безопасностью</div>
+                    </li>
+                    <li class="swiper-slide services__card">
+                        <img src="img/service/Аудит информационной безопасности.png" alt="" class="services__img">
+                        <div class="services__info-text">Аудит информационной безопасности</div>
+                    </li>
+                    <li class="swiper-slide services__card">
+                        <img src="img/service/Реагирование на инциденты.png" alt="" class="services__img">
+                        <div class="services__info-text">Реагирование на инциденты</div>
+                    </li>
+                    <li class="swiper-slide services__card">
+                        <img src="img/service/Обучение сотрудников.png" alt="" class="services__img">
+                        <div class="services__info-text">Обучение сотрудников</div>
+                    </li>
+                    <li class="swiper-slide services__card">
+                        <img src="img/service/Тестирование безопасности приложений.png" alt="" class="services__img">
+                        <div class="services__info-text">Тестирование безопасности приложений</div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Навигация слайдера -->
+            <div class="slider">
+                <div class="slider__prev">
+                    <img src="img/service/servicestr-prev.svg" alt="">
+                </div>
+                <!-- Точки пагинации -->
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot "></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="slider__next">
+                    <img src="img/service/servicestr-next.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="request-section">
+            <div class="container"> 
+                <div class="request-section__title">Оставить заявку</div>
+                <form class="request-section__form">
+                    <input type="text" class="form__input-data" id="name" name="name" placeholder="Введите имя" required>
+
+                    <input type="tel" class="form__input-data" id="phone" name="phone" placeholder="Введите телефон" required>
+
+                    <input type="email" class="form__input-data" id="email" name="email" placeholder="Введите почту" required>
+
+                    <button  class="request-section__btn" type="submit">Отправить</button>
+                </form>
             </div>
         </section>
     </main>

@@ -29,18 +29,36 @@
     flex-wrap: wrap;
     gap: 34px 40px; 
 }
-
+/* linear-gradient(90deg, #2924C8 0%, #E8E8FF 50%, #2924C8 75%, #2924C8 100%) */
 .cyberattack-statistics__card {
-        width: 450px;
-        backdrop-filter: blur(13.918118476867676px);
-        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
-        background: rgba(255, 255, 255, 0.09);
-        border-radius: 14px;
-        padding: 23px 59px 30px 25px;
-        position: relative;
-        overflow: hidden;
+    position: relative;
+    width: 450px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.09);
+    /* Фон карточки */
+    border-radius: 14px;
+    /* Округление углов */
+    z-index: 1;
 }
 
+/* Градиентная рамка */
+.cyberattack-statistics__card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px;
+    /* Толщина рамки */
+    border-radius: 14px;
+    /* Округление углов */
+    background: linear-gradient(90deg, #2924C8 0%, #E8E8FF 50%, #2924C8 75%, #2924C8 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
 .cyberattack-statistics__img-dec {
     position: absolute;
     bottom: 0;
@@ -90,16 +108,23 @@
 }
 
 @media (max-width: 800px) {
+    .cyberattack-statistics {
+            margin-top: 24px;
+    
+        }
     .cyberattack-statistics__content {
         padding: 46px 34px 40px 34px;
     }
     .cyberattack-statistics__info-block {
         margin-top: 27px;
     }
-        .cyberattack-statistics__list-item {
-            margin-top: 22px;
-    
-        }
+    .cyberattack-statistics__list-item {
+        margin-top: 22px;
+
+    }
+    .cyberattack-statistics__list-card{
+        row-gap: 8px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -111,5 +136,12 @@
     }
     .cyberattack-statistics__list-item {
         margin-top: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .cyberattack-statistics {
+        margin-top: 21px;
+
     }
 }
